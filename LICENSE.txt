@@ -27,6 +27,7 @@ This license:
 Grants use only, not ownership
 Does not permit sublicensing, resale, or transfer
 Is non-exclusive, non-transferable, and revocable at any time
+Navine reserves the right to revoke this license immediately, with or without notice, at the sole discretion of the Owner or Co-Owner.
 --------------------------------------------------
 LEGAL NOTICE
 --------------------------------------------------
