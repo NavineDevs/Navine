@@ -11,6 +11,23 @@ Owner: Zach
 Co-Owner: HitBoyXx23
 
 --------------------------------------------------
+AUTOMATIC LICENSE GRANT
+--------------------------------------------------
+
+The following individuals and groups are automatically granted permission to use all Navine Assets, without requiring additional written approval:
+-Navine Team Members – Any individual officially recognized as part of the Navine team.
+-Friends of the Owners – Any individual personally approved by one or more Navine owners.
+-Official Partners – Individuals or groups formally partnered with Navine.
+-Approved Collaborators – Contributors working with Navine on projects, events, or content.
+-Contracted Developers or Creators – Individuals hired or commissioned by Navine.
+-Authorized Community Staff – Moderators or administrators officially appointed by Navine.
+
+This license is valid unless explicitly revoked by a Navine owner.
+This license:
+Grants use only, not ownership
+Does not permit sublicensing, resale, or transfer
+Is non-exclusive, non-transferable, and revocable at any time
+--------------------------------------------------
 LEGAL NOTICE
 --------------------------------------------------
 
