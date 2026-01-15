@@ -6,7 +6,6 @@
 <title>Navine | Contact</title>
 
 <link rel="icon" href="/navine.ico" type="image/x-icon">
-
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -33,12 +32,10 @@ body {
     opacity: 0.85;
 }
 
-/* Remove default marker */
 summary::-webkit-details-marker {
     display: none;
 }
 
-/* Dropdown animation */
 .details-content {
     max-height: 0;
     overflow: hidden;
@@ -47,11 +44,10 @@ summary::-webkit-details-marker {
 }
 
 details[open] .details-content {
-    max-height: 200px;
+    max-height: 300px;
     opacity: 1;
 }
 
-/* Arrow rotation */
 .arrow {
     transition: transform 0.3s ease;
 }
@@ -69,121 +65,108 @@ details[open] .arrow {
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-        <!-- CARD -->
         <details class="card p-6">
             <summary class="flex flex-col items-center space-y-4 list-none">
-                <img src="https://cdn.discordapp.com/avatars/1289315440392405008/93131d0dfe62e6d44ede8a1be6d4cbc9.png?size=1024"
-                     class="rounded-full border-4 border-black">
+                <img src="https://cdn.discordapp.com/avatars/1289315440392405008/93131d0dfe62e6d44ede8a1be6d4cbc9.png?size=1024" class="rounded-full border-4 border-black" alt="Zach">
                 <h2 class="text-2xl font-bold">Zach</h2>
                 <p class="text-sm opacity-80">Founder</p>
 
-                <!-- Always visible -->
                 <div class="flex gap-6">
-                    <a href="https://discord.com/users/1289315440392405008">
+                    <a href="https://discord.com/users/1289315440392405008" class="flex flex-col items-center">
                         <img src="discord.png" class="icon" alt="Discord">
                         <p>Discord</p>
                     </a>
-                    <a href="mailto:zach@navine.dev">
+                    <a href="mailto:zach@navine.dev" class="flex flex-col items-center">
                         <img src="email.png" class="icon" alt="Email">
                         <p>Email</p>
                     </a>
                 </div>
 
-                <!-- TOGGLE BUTTON -->
-                <button type="button"
-                        class="flex items-center gap-2 text-xs opacity-70 mt-2 toggle-btn">
+                <button type="button" class="flex items-center gap-2 text-xs opacity-70 mt-2 toggle-btn">
                     More contact options
-                    <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
             </summary>
 
             <div class="details-content mt-4 flex justify-center gap-6">
-                <a href="#">
-                   <img src="github.png" class="icon" alt="GitHub">
-                  <p>GitHub</p>
+                <a href="#" class="flex flex-col items-center">
+                    <img src="github.png" class="icon" alt="GitHub">
+                    <p>GitHub</p>
+                </a>
             </div>
         </details>
 
-        <!-- CARD -->
         <details class="card p-6">
             <summary class="flex flex-col items-center space-y-4 list-none">
-                <img src="https://cdn.discordapp.com/avatars/1114586353116647444/f4920425d2f8df15f73ad8eb0e164c8f.png?size=1024"
-                     class="rounded-full border-4 border-black">
+                <img src="https://cdn.discordapp.com/avatars/1114586353116647444/f4920425d2f8df15f73ad8eb0e164c8f.png?size=1024" class="rounded-full border-4 border-black" alt="HitBoyXx23">
                 <h2 class="text-2xl font-bold">HitBoyXx23</h2>
                 <p class="text-sm opacity-80">Co Founder</p>
 
                 <div class="flex gap-6">
-                    <a href="https://discord.com/users/1114586353116647444">
+                    <a href="https://discord.com/users/1114586353116647444" class="flex flex-col items-center">
                         <img src="discord.png" class="icon" alt="Discord">
                         <p>Discord</p>
                     </a>
-                    <a href="mailto:hitboyxx23@navine.dev">
+                    <a href="mailto:hitboyxx23@navine.dev" class="flex flex-col items-center">
                         <img src="email.png" class="icon" alt="Email">
                         <p>Email</p>
                     </a>
                 </div>
 
-                <button type="button"
-                        class="flex items-center gap-2 text-xs opacity-70 mt-2 toggle-btn">
+                <button type="button" class="flex items-center gap-2 text-xs opacity-70 mt-2 toggle-btn">
                     More contact options
-                    <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
             </summary>
 
             <div class="details-content mt-4 flex justify-center gap-6">
-                <a href="https://github.com/HitBoyXx23-dev">
-                   <img src="github.png" class="icon" alt="GitHub">
-                  <p>GitHub</p>
+                <a href="https://github.com/HitBoyXx23-dev" class="flex flex-col items-center">
+                    <img src="github.png" class="icon" alt="GitHub">
+                    <p>GitHub</p>
+                </a>
             </div>
         </details>
 
-        <!-- CARD -->
         <details class="card p-6">
             <summary class="flex flex-col items-center space-y-4 list-none">
-                <img src="https://cdn.discordapp.com/avatars/1041030537407647765/716dd043df638d54b6185a3bd16c9169.png?size=1024"
-                     class="rounded-full border-4 border-black">
+                <img src="https://cdn.discordapp.com/avatars/1041030537407647765/716dd043df638d54b6185a3bd16c9169.png?size=1024" class="rounded-full border-4 border-black" alt="Ben">
                 <h2 class="text-2xl font-bold">Ben</h2>
                 <p class="text-sm opacity-80">Dev</p>
 
                 <div class="flex gap-6">
-                    <a href="https://discord.com/users/1041030537407647765">
+                    <a href="https://discord.com/users/1041030537407647765" class="flex flex-col items-center">
                         <img src="discord.png" class="icon" alt="Discord">
                         <p>Discord</p>
                     </a>
-                    <a href="mailto:ben@navine.dev">
+                    <a href="mailto:ben@navine.dev" class="flex flex-col items-center">
                         <img src="email.png" class="icon" alt="Email">
                         <p>Email</p>
                     </a>
                 </div>
 
-                <button type="button"
-                        class="flex items-center gap-2 text-xs opacity-70 mt-2 toggle-btn">
+                <button type="button" class="flex items-center gap-2 text-xs opacity-70 mt-2 toggle-btn">
                     More contact options
-                    <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                         viewBox="0 0 24 24">
+                    <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
             </summary>
 
             <div class="details-content mt-4 flex justify-center gap-6">
-                <a href="#">
-                   <img src="github.png" class="icon" alt="GitHub">
-                  <p>GitHub</p>
+                <a href="#" class="flex flex-col items-center">
+                    <img src="github.png" class="icon" alt="GitHub">
+                    <p>GitHub</p>
+                </a>
             </div>
         </details>
 
     </div>
 
-    <a href="index.html" class="block mt-16 text-cyan-400 hover:underline">
-        ← Back Home
-    </a>
+    <a href="index.html" class="block mt-16 text-cyan-400 hover:underline">← Back Home</a>
 </div>
 
 <script>
@@ -193,13 +176,8 @@ document.querySelectorAll(".toggle-btn").forEach(btn => {
     btn.addEventListener("click", e => {
         e.preventDefault();
         e.stopPropagation();
-
         const parent = btn.closest("details");
-
-        details.forEach(d => {
-            if (d !== parent) d.removeAttribute("open");
-        });
-
+        details.forEach(d => d !== parent && d.removeAttribute("open"));
         parent.toggleAttribute("open");
     });
 });
