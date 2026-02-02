@@ -7,7 +7,7 @@ All Rights Reserved
 Effective Date: January 1, 2026
 
 Company Name: Navine
-Original Owner:Projakob (no longer owner)
+Original Owner: Projakob (no longer owner)
 Owner: Zach
 Co-Owner: HitBoyXx23
 
@@ -17,7 +17,7 @@ AUTOMATIC LICENSE GRANT
 
 The following individuals and groups are automatically granted permission to use all Navine Assets, without requiring additional written approval:
 -Navine Team Members – Any individual officially recognized as part of the Navine team.
--Friends of the Owners – Any individual personally approved by one or more Navine owners.
+-Friends of the Owners – Individuals explicitly approved in writing (including electronic messages) by an Owner or Co-Owner.
 -Official Partners – Individuals or groups formally partnered with Navine.
 -Approved Collaborators – Contributors working with Navine on projects, events, or content.
 -Contracted Developers or Creators – Individuals hired or commissioned by Navine.
@@ -47,7 +47,7 @@ agree, you must immediately cease all use.
 1. OWNERSHIP & INTELLECTUAL PROPERTY
 --------------------------------------------------
 
-Navine is a some what privately owned company operated by Zach, with
+Navine is a privately owned company operated by Zach, with
 HitBoyXx23 recognized as Co-Owner.
 
 All Navine Assets, including but not limited to:
