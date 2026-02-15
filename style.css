@@ -4,6 +4,9 @@ body {
     background: radial-gradient(circle at top, #1e3a8a 0%, #000000 45%, #00eaff 100%);
     overflow-x: hidden;
 }
+html, body{
+    height: 100%;
+}
 .card {
     background: linear-gradient(135deg, #1e3a8a, #00eaff);
     border-radius: 1rem;
