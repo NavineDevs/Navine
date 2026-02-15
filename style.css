@@ -40,3 +40,37 @@ body {
             transform: translateY(-6px) scale(1.03);
             box-shadow: 0 0 40px rgba(0,234,255,0.65);
         }
+.icon {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.details-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+details[open] .details-content {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+    transform: rotate(180deg);
+}
