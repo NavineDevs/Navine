@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnet Strength Meter</title>
+<style>
+body {
+    background: #111827;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin-top: 40px;
+}
+#status { margin: 15px; font-size: 16px; }
+#strength { font-size: 28px; margin: 15px 0; }
+.bar-container {
+    width: 85%;
+    height: 25px;
+    background: #1f2937;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.bar {
+    height: 100%;
+    width: 0%;
+    background: lime;
+    transition: width 0.1s;
+}
+button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>🧲 Magnet Strength Meter</h1>
+
+<div id="status">Press Start</div>
+<div id="strength"></div>
+
+<div class="bar-container">
+    <div class="bar" id="bar"></div>
+</div>
+
+<button onclick="init()">Start</button>
+
+<script>
+async function init() {
+
+    const status = document.getElementById("status");
+
+    if (!("Magnetometer" in window)) {
+        status.innerText = "Magnetometer API not supported in this browser.";
+        return;
+    }
+
+    try {
+        // Check permission state
+        const result = await navigator.permissions.query({ name: "magnetometer" });
+
+        if (result.state === "denied") {
+            status.innerText = "Magnetometer permission denied.\nCheck Chrome site settings.";
+            return;
+        }
+
+        startSensor();
+
+    } catch (error) {
+        status.innerText = "Permission API error: " + error;
+    }
+}
+
+function startSensor() {
+
+    const status = document.getElementById("status");
+
+    try {
+        const sensor = new Magnetometer({ frequency: 60 });
+
+        sensor.addEventListener("reading", () => {
+
+            let total = Math.sqrt(
+                sensor.x * sensor.x +
+                sensor.y * sensor.y +
+                sensor.z * sensor.z
+            );
+
+            document.getElementById("strength").innerText =
+                total.toFixed(2) + " µT";
+
+            let percent = Math.min((total / 200) * 100, 100);
+            let bar = document.getElementById("bar");
+
+            bar.style.width = percent + "%";
+
+            if (total < 70) {
+                bar.style.background = "lime";
+            } else if (total < 150) {
+                bar.style.background = "orange";
+            } else {
+                bar.style.background = "red";
+            }
+
+            status.innerText = "Sensor Active";
+        });
+
+        sensor.addEventListener("error", event => {
+            status.innerText = "Sensor error: " + event.error.name;
+        });
+
+        sensor.start();
+
+    } catch (error) {
+        status.innerText = "Failed to start sensor: " + error;
+    }
+}
+</script>
+
+</body>
+</html>
