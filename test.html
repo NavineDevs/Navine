@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnet Strength Viewer</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #111;
+    color: white;
+    margin-top: 50px;
+}
+
+#strength {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.bar-container {
+    width: 80%;
+    height: 30px;
+    background: #333;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    width: 0%;
+    background: lime;
+    transition: width 0.1s;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+</style>
+</head>
+<body>
+
+<h1>🧲 Magnet Strength Viewer</h1>
+<div id="strength">Waiting for sensor...</div>
+
+<div class="bar-container">
+    <div class="bar" id="bar"></div>
+</div>
+
+<div class="status" id="status"></div>
+
+<script>
+if ('Magnetometer' in window) {
+
+    const magnetometer = new Magnetometer({frequency: 30});
+
+    magnetometer.addEventListener('reading', () => {
+
+        let x = magnetometer.x;
+        let y = magnetometer.y;
+        let z = magnetometer.z;
+
+        // Calculate total magnetic field strength
+        let total = Math.sqrt(x*x + y*y + z*z);
+
+        document.getElementById("strength").innerText =
+            "Magnetic Strength: " + total.toFixed(2) + " µT";
+
+        // Scale for visual bar (Earth magnetic field ~25–65 µT)
+        let percent = Math.min((total / 200) * 100, 100);
+        let bar = document.getElementById("bar");
+        bar.style.width = percent + "%";
+
+        // Change color based on strength
+        if (total < 70) {
+            bar.style.background = "lime";
+            document.getElementById("status").innerText = "Normal (Earth's magnetic field)";
+        } else if (total < 150) {
+            bar.style.background = "orange";
+            document.getElementById("status").innerText = "Moderate Magnet Detected";
+        } else {
+            bar.style.background = "red";
+            document.getElementById("status").innerText = "Strong Magnet Detected!";
+        }
+    });
+
+    magnetometer.start();
+
+} else {
+    document.getElementById("strength").innerText =
+        "Magnetometer not supported on this device/browser.";
+}
+</script>
+
+</body>
+</html>
