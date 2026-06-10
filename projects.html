@@ -48,7 +48,8 @@
             <div class="details-content">
                 <div class="pt-4 space-y-3">
                     <p class="text-gray-300 text-sm">A Minecraft Hack Client.</p>
-                    <div class="flex gap-2 flex-wrap">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-xs text-gray-500 font-medium">Built with:</span>
                         <span class="tag">Java</span>
                     </div>
                     <a href="https://github.com/NavineDevs/Navine-Client" target="_blank" rel="noopener noreferrer"
@@ -75,7 +76,7 @@
             <div class="details-content">
                 <div class="pt-4 space-y-3">
                     <p class="text-gray-300 text-sm">Unrestricted AI.</p>
-                    <span class="text-sm text-gray-500">Coming Soon</span>
+                    <p class="text-xs text-gray-500">Coming Soon</p>
                 </div>
             </div>
         </details>
@@ -93,10 +94,11 @@
             <div class="details-content">
                 <div class="pt-4 space-y-3">
                     <p class="text-gray-300 text-sm">Simpler Python.</p>
-                    <div class="flex gap-2 flex-wrap">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-xs text-gray-500 font-medium">Built with:</span>
                         <span class="tag">Python</span>
                     </div>
-                    <span class="text-sm text-gray-500">Coming Soon</span>
+                    <p class="text-xs text-gray-500">Coming Soon</p>
                 </div>
             </div>
         </details>
@@ -105,15 +107,14 @@
 </div>
 
 <script>
-const details = document.querySelectorAll("details");
-document.querySelectorAll("summary").forEach(summary => {
-    summary.addEventListener("click", () => {
-        setTimeout(() => {
-            const parent = summary.closest("details");
-            if (parent && parent.open) {
-                details.forEach(d => d !== parent && d.removeAttribute("open"));
-            }
-        }, 0);
+const allDetails = document.querySelectorAll("details");
+allDetails.forEach(detail => {
+    detail.addEventListener("toggle", () => {
+        if (detail.open) {
+            allDetails.forEach(other => {
+                if (other !== detail) other.open = false;
+            });
+        }
     });
 });
 </script>
