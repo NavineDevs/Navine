@@ -82,6 +82,11 @@ body.index-page {
     border-color: rgba(56, 189, 248, 0.38);
 }
 
+details.card:hover,
+details.card[open]:hover {
+    transform: none;
+}
+
 .tag {
     display: inline-block;
     padding: 0.2rem 0.65rem;
@@ -190,7 +195,7 @@ summary::-webkit-details-marker {
 }
 
 details[open] .details-content {
-    max-height: 300px;
+    max-height: 600px;
     opacity: 1;
 }
 
